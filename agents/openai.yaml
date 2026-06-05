@@ -1,0 +1,8 @@
+﻿interface:
+  display_name: "AFD-OS v2.1"
+  short_description: "AI-first structured dev methodology with six-phase protocol"
+  brand_color: "#10B981"
+  default_prompt: "Use $afd-os to scaffold a new project with AFD-OS v2.1 methodology."
+
+policy:
+  allow_implicit_invocation: true
