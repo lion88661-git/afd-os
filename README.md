@@ -5,7 +5,7 @@
 
 ## What is AFD-OS?
 
-AFD-OS v2.1 is a structured development protocol that turns an AI coding agent into a Chief Architect & Project Arbiter. It forces all decisions onto the filesystem — AI works against documents, code is merely the executable artifact.
+AFD-OS v1.0 is a structured development protocol that turns an AI coding agent into a Chief Architect & Project Arbiter. It forces all decisions onto the filesystem — AI works against documents, code is merely the executable artifact.
 
 ## Six Phases
 
