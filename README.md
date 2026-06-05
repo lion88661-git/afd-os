@@ -1,6 +1,7 @@
 ﻿# AFD-OS v2.1 — AI First Development Operating System
 
-> **Codex Skill**: Six-phase document-driven development methodology with architecture-first governance.
+> **Codex Skill**: Six-phase document-driven AI-first development methodology with architecture-first governance.
+> **GitHub**: [lion88661-git/afd-os](https://github.com/lion88661-git/afd-os) · **License**: MIT
 
 ## What is AFD-OS?
 
@@ -8,17 +9,27 @@ AFD-OS v2.1 is a structured development protocol that turns an AI coding agent i
 
 ## Six Phases
 
-| Phase | Output | Description |
-|-------|--------|-------------|
-| **0** | Product Matrix | Mandatory requirement simplification via 5-dimension matrix |
-| **X** | Non-template handling | Fallback for requests outside the matrix |
-| **1** | docs/business_breakdown.md | Business goals, actors, user flows, MVP scope |
-| **1.5** | docs/prd.md | Prioritized features, user stories, flows |
-| **2** | docs/system_design.md | Single tech stack, data model, API contracts, dir structure |
-| **2.5** | docs/adr/ADR-XXX.md | Architecture Decision Records with tombstone mechanism |
-| **3** | docs/tasks.md | Atomic task execution with verification lock |
-| **4 & 5** | State Governance | project_state.md updates, 3-strike rollback |
-| **6** | Completion Gate | Mandatory checklist before task handoff |
+| Phase   | Output                        | Description                                               |
+|---------|-------------------------------|-----------------------------------------------------------|
+| **0**   | Product Matrix                | Mandatory requirement simplification via 5-dimension matrix |
+| **X**   | Non-template handling         | Fallback for requests outside the matrix                  |
+| **1**   | docs/business_breakdown.md    | Business goals, actors, user flows, MVP scope             |
+| **1.5** | docs/prd.md                   | Prioritized features, user stories, flows                 |
+| **2**   | docs/system_design.md         | Single tech stack, data model, API contracts, dir structure |
+| **2.5** | docs/adr/ADR-XXX.md           | Architecture Decision Records with tombstone mechanism    |
+| **3**   | docs/tasks.md                 | Atomic task execution with verification lock              |
+| **4 & 5** | State Governance            | project_state.md updates, 3-strike rollback               |
+| **6**   | Completion Gate               | Mandatory checklist before task handoff                   |
+
+## Product Positioning Matrix (Phase 0)
+
+| Dimension          | Options                                                                    |
+|--------------------|----------------------------------------------------------------------------|
+| 1. Product Form    | [1] Web  [2] Mini Program  [3] Desktop  [4] Native App  [5] Browser Extension  [6] Backend/CLI |
+| 2. Business Type   | [A] Content Display  [B] Form/Management  [C] SaaS/Tool  [D] E-commerce/Payment  [E] Social/Real-time |
+| 3. Infrastructure  | [X] No Database  [Y] BaaS Cloud  [Z] Independent Backend                  |
+| 4. Auth System     | [Q1] Public  [Q2] Username/Password  [Q3] Third-party Login               |
+| 5. Business Model  | [S1] Open Source/Personal  [S2] One-time Purchase  [S3] SaaS Subscription  [S4] Ad-supported |
 
 ## Core Protections
 
@@ -32,29 +43,38 @@ AFD-OS v2.1 is a structured development protocol that turns an AI coding agent i
 
 This is a [Codex](https://github.com/openai/codex) skill.
 
-### Via skill-installer
+### Via skill-installer (Recommended)
 
 `ash
-python scripts/install-skill-from-github.py --repo <owner>/afd-os --path skills/afd-os
+python scripts/install-skill-from-github.py --repo lion88661-git/afd-os --path . --name afd-os
 `
+
+> **Note**:  + "--name afd-os"+ @" is required because the skill lives at the repo root ( + "--path ." + @).
 
 ### Manual
 
 `ash
-cp -r skills/afd-os /skills/afd-os
+git clone https://github.com/lion88661-git/afd-os.git /tmp/afd-os
+cp -r /tmp/afd-os /skills/afd-os
 `
 
-Then restart Codex.
+> Restart Codex after installation to pick up the new skill.
+
+### One-liner
+
+`ash
+git clone https://github.com/lion88661-git/afd-os.git "/skills/afd-os"
+`
 
 ## Usage
 
 Start a new conversation in Codex and say:
 
 `
-$afd-os I want to build a task management app
+-os I want to build a task management app
 `
 
-Or just describe your project — the skill triggers automatically when you mention starting a new project or AFD-OS.
+Or just describe your project — the skill triggers automatically when you mention starting a new project, AFD-OS, or structured development workflow.
 
 ## License
 
