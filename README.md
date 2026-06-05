@@ -55,7 +55,7 @@ python scripts/install-skill-from-github.py --repo lion88661-git/afd-os --path .
 ### Manual
 
 ```bash
-git clone [https://github.com/lion88661-git/afd-os.git](https://github.com/lion88661-git/afd-os.git) /tmp/afd-os
+git clone https://github.com/lion88661-git/afd-os.git /tmp/afd-os
 cp -r /tmp/afd-os /skills/afd-os
 
 ```
